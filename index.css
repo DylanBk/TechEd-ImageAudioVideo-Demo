@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'Audiowide';
+    src: url('/assets/fonts/Audiowide-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('/assets/fonts/Geist-VariableFont_wght.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    background: black;
+    color: white;
+    background: black;
+    font-family: 'Geist';
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+nav a:hover{
+    text-decoration-line: underline;
+    text-underline-offset: 0.2rem;
+}
+
+main > section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+video {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+    font-family: 'Audiowide';
+}
+p {
+    color: lightgrey;
+}
+
+hr {
+    width: 75%;
+    border: solid 1px #DDD;
+    margin-bottom: 0.5rem;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+button {
+    height: fit-content;
+    width: fit-content;
+    padding: 0.75rem 2rem;
+    border: solid 2px white;
+    margin-top: 2rem;;
+    font-size: 1.25rem;
+    transition: all 0.3s;
+}
+button:hover {
+    background: white;
+    color: black;
+}
+
+#menu button {
+    padding: 0.5rem;
+    border: none;
+    margin: 0;
+}
+#menu button:hover {
+    background: #333;
+}
+#menu button:not(:first-of-type) {
+    border-left: solid 1px white;
+}
+#menu button:first-of-type {
+    border-radius: 100rem 0 0 100rem;
+}
+#menu button:last-of-type {
+    border-radius: 0 100rem 100rem 0;
+}
+
+#menu img {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+#carousel {
+    height: 11rem;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    overflow-x: scroll;
+}
+#carousel img {
+    height: 5rem;
+    width: auto;
+    border: solid 1px gray;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#carousel::-webkit-scrollbar {
+    height: 0.5rem;
+    background-color: #222;
+}
+#carousel::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 1rem;
+}
